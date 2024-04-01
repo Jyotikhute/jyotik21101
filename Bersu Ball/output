@@ -1,1 +1,7 @@
-
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ a12.cpp -o a12 } ; if ($?) { .\a12 }
+cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ a12.cpp -o a12 } ; if ($?) { .\a12 }
+4
+1 4 6 2
+5 
+5 1 5 7 9 
+3
