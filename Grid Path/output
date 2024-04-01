@@ -1,1 +1,24 @@
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ a12.cpp -o a12 } ; if ($?) { .\a12 }
+cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ a12.cpp -o a12 } ; if ($?) { .\a12 }
+4
+. * . .
+. . . *
+* . . .
+3
 
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ a12.cpp -o a12 } ; if ($?) { .\a12 }
+cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ a12.cpp -o a12 } ; if ($?) { .\a12 }
+5
+. . . * .
+. . * . .
+. . . * *
+* . . * .
+* . . . .
+9
+
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ a12.cpp -o a12 } ; if ($?) { .\a12 }
+cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ a12.cpp -o a12 } ; if ($?) { .\a12 }
+2
+. *
+* .
+0
