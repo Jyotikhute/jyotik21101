@@ -1,1 +1,20 @@
+Enter size of the array: 4
+Enter elements of the array:
+4 3 -1 6
+Maximum product Subarray is: 12
+...Program finished with exit code 0
+Press ENTER to exit console.
 
+Enter size of the array: 0
+Enter elements of the array:
+Maximum Product Subarray: 0
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
+Enter size of the array: 7
+Enter elements of the array:
+8 9 6-302-5
+Maximum product Subarray is: 432
+...Program finished with exit code 0
+PreSS ENTER to exit console.
