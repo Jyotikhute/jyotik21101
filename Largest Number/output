@@ -1,1 +1,15 @@
 
+Enter the list of non-negative integers separated by spaces: 3 30 34 5 9
+
+The largest number formed by arranging the elements of the list: 9534330
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ gready.cpp -o gready } ; if ($?) { .\gready }       
+Enter the list of non-negative integers separated by spaces: 12 23 13 45 8 92
+
+The largest number formed by arranging the elements of the list: 92845231312
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ gready.cpp -o gready } ; if ($?) { .\gready }       
+Enter the list of non-negative integers separated by spaces: 18 27 93 86 43 98 101 202
+
+The largest number formed by arranging the elements of the list: 989386432720218101
+PS C:\Users\ASUSX515221221\Desktop\Practice>
+
+
