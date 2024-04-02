@@ -1,1 +1,54 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+class Solution {
+public:
+    string largestNumber(vector<int>& nums) {
+        // Convert integers to strings
+        vector<string> strs(nums.size());
+        for (int i = 0; i < nums.size(); ++i) {
+            strs[i] = to_string(nums[i]);
+        }
+        
+        // Sort strings using custom comparison
+        sort(strs.begin(), strs.end(), [](const string& a, const string& b) {
+            return (b + a) < (a + b);
+        });
+        
+        // Concatenate sorted strings
+        string result;
+        for (const string& str : strs) {
+            result += str;
+        }
+        
+        // Remove leading zeros if any
+        size_t pos = result.find_first_not_of('0');
+        if (pos != string::npos) {
+            return result.substr(pos);
+        }
+        
+        // If the result is empty, return "0"
+        return "0";
+    }
+};
+
+int main() {
+    Solution solution;
+    vector<int> nums;
+    int num;
+    
+    cout << "Enter the list of non-negative integers separated by spaces: ";
+    while (cin >> num) {
+        nums.push_back(num);
+    }
+
+    // Call the function to find the largest number
+    string largest_num = solution.largestNumber(nums);
+    cout << "The largest number formed by arranging the elements of the list: " << largest_num << endl;
+
+    return 0;
+}
 
