@@ -1,1 +1,14 @@
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ gready.cpp -o gready } ; if ($?) { .\gready }       
+Enter the ice cream bar prices separated by space: 4 2 7 3 1 3
+Enter the number of coins: 6
+Maximum number of ice cream bars: 3
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ gready.cpp -o gready } ; if ($?) { .\gready }       
+Enter the ice cream bar prices separated by space: 6 5 8 9 10 7 12
+Enter the number of coins: 7
+Maximum number of ice cream bars: 1
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ gready.cpp -o gready } ; if ($?) { .\gready }       
+Enter the ice cream bar prices separated by space: 3 4 2 5
+Enter the number of coins: 4
+Maximum number of ice cream bars: 1
+PS C:\Users\ASUSX515221221\Desktop\Practice>
 
