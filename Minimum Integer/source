@@ -1,1 +1,57 @@
 
+#include <iostream>
+#include <string>
+#include <stack>
+
+std::string removeKdigits(const std::string& num, int k) {
+    if (k >= num.length()) {
+        return "0"; // Base case: If k is greater than or equal to the length of num, return "0"
+    }
+
+    std::stack<char> s; // Use a stack to store the digits
+
+    for (char digit : num) {
+        while (!s.empty() && k > 0 && s.top() > digit) {
+            s.pop(); // Pop the top digit if the current digit is smaller and k > 0
+            k--;
+        }
+        s.push(digit); // Push the current digit
+    }
+
+    // If k is still greater than 0, remove remaining digits from the stack
+    while (k > 0 && !s.empty()) {
+        s.pop();
+        k--;
+    }
+
+    // Construct the smallest possible integer from the stack
+    std::string result;
+    while (!s.empty()) {
+        result = s.top() + result;
+        s.pop();
+    }
+
+    // Remove leading zeros
+    size_t nonZeroIndex = result.find_first_not_of('0');
+    if (nonZeroIndex != std::string::npos) {
+        return result.substr(nonZeroIndex);
+    }
+
+    return "0";
+}
+
+int main() {
+    std::string num;
+    int k;
+
+    // Take user input for num and k
+    std::cout << "Enter a non-negative integer: ";
+    std::cin >> num;
+    std::cout << "Enter the number of digits to remove (k): ";
+    std::cin >> k;
+
+    // Call the function and display the result
+    std::cout << "Smallest possible integer after removing " << k << " digits: " << removeKdigits(num, k) << std::endl;
+
+    return 0;
+}
