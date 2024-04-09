@@ -1,1 +1,22 @@
 
+PS C:\Users\ASUSX515221221\Desktop\Practice\.vscode> cd "c:\Users\ASUSX515221221\Desktop\Practice\.vscode\" ; if ($?) { g++ a1.cpp -o a1 } ; if ($?) { .\a1 }
+Enter a non-negative integer: "1432219"
+Enter the number of digits to remove (k): 3
+Smallest possible integer after removing 3 digits: "1219"
+PS C:\Users\ASUSX515221221\Desktop\Practice\.vscode> cd "c:\Users\ASUSX515221221\Desktop\Practice\.vscode\" ; if ($?) { g++ a1.cpp -o a1 } ; if ($?) { .\a1 }
+Enter a non-negative integer: "10200"
+Enter the number of digits to remove (k): 1
+Smallest possible integer after removing 1 digits: "200"
+PS C:\Users\ASUSX515221221\Desktop\Practice\.vscode> cd "c:\Users\ASUSX515221221\Desktop\Practice\.vscode\" ; if ($?) { g++ a1.cpp -o a1 } ; if ($?) { .\a1 }
+Enter a non-negative integer: "10"
+Enter the number of digits to remove (k): 2
+Smallest possible integer after removing 2 digits: "0"
+PS C:\Users\ASUSX515221221\Desktop\Practice\.vscode> cd "c:\Users\ASUSX515221221\Desktop\Practice\.vscode\" ; if ($?) { g++ a1.cpp -o a1 } ; if ($?) { .\a1 }
+Enter a non-negative integer: "653821" 
+Enter the number of digits to remove (k): 3
+Smallest possible integer after removing 3 digits: "321"
+PS C:\Users\ASUSX515221221\Desktop\Practice\.vscode> cd "c:\Users\ASUSX515221221\Desktop\Practice\.vscode\" ; if ($?) { g++ a1.cpp -o a1 } ; if ($?) { .\a1 }
+Enter a non-negative integer: "2478905"
+Enter the number of digits to remove (k): 4
+Smallest possible integer after removing 4 digits: "205"
+PS C:\Users\ASUSX515221221\Desktop\Practice\.vscode>
