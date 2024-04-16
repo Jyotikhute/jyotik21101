@@ -1,1 +1,9 @@
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ tempCodeRunnerFile.cpp -o tempCodeRunnerFile } ; if ($?) { .\tempCodeRunnerFile }
+5 
+[01001 01100 10000 01101 00000]
+0
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ tempCodeRunnerFile.cpp -o tempCodeRunnerFile } ; if ($?) { .\tempCodeRunnerFile }
+10
+[0001001001 1001100100 1011010111 0000111001 0001001001 1101001111 0000000011 1111111001 1001010011 0101110010]   
+0
 
