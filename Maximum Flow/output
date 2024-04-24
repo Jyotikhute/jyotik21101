@@ -1,1 +1,8 @@
+PS C:\Users\ASUSX515221221\Desktop\Practice> cd "c:\Users\ASUSX515221221\Desktop\Practice\" ; if ($?) { g++ exp12.cpp -o exp12 } ; if ($?) { .\exp12 }
+The maximum possible flow from vertex 1 to vertex 6 is
+PS C:\Users\ASUSX515221221\Desktop\Practice>
+
+
+
+
 
