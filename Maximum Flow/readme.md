@@ -18,7 +18,9 @@ Use a queue for BFS, starting by enqueuing the source vertex and marking it as v
 Traverse the graph level by level until you either reach the sink or exhaust all possible paths.
 If a path is found to the sink, record the path by updating the parent[] array and return true.
 If no path is found, return false.
+
 Main Loop of Ford-Fulkerson:
+
 While bfs() finds an augmenting path:
 Determine the minimum capacity (path_flow) along the path found by bfs() (this is the bottleneck of the current path).
 Update the residual capacities of the edges and reverse edges along the path:
