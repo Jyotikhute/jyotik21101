@@ -1,1 +1,92 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <climits>
+using namespace std;
+
+// Finds an augmenting path using BFS and updates the parent array
+bool bfs(vector<vector<int>>& residualGraph, int source, int sink, vector<int>& parent) {
+    int V = residualGraph.size();
+    vector<bool> visited(V, false);
+    queue<int> queue;
+    queue.push(source);
+    visited[source] = true;
+    parent[source] = -1;
+
+    while (!queue.empty()) {
+        int u = queue.front();
+        queue.pop();
+
+        for (int v = 0; v < V; v++) {
+            if (!visited[v] && residualGraph[u][v] > 0) {
+                if (v == sink) {
+                    parent[v] = u;
+                    return true;
+                }
+                queue.push(v);
+                visited[v] = true;
+                parent[v] = u;
+            }
+        }
+    }
+
+    return false;
+}
+
+// Implementation of the Ford-Fulkerson algorithm for finding maximum flow
+int fordFulkerson(vector<vector<int>>& graph, int source, int sink) {
+    int u, v;
+    int V = graph.size();
+    vector<vector<int>> residualGraph = graph; // Copy the graph to the residual graph
+    vector<int> parent(V); // This array is filled by BFS and to store the path
+    int max_flow = 0;
+
+    // Augment the flow while there is a path from source to sink
+    while (bfs(residualGraph, source, sink, parent)) {
+        // Find the maximum flow through the path found.
+        int path_flow = INT_MAX;
+        for (v = sink; v != source; v = parent[v]) {
+            u = parent[v];
+            path_flow = min(path_flow, residualGraph[u][v]);
+        }
+
+        // update residual capacities of the edges and reverse edges along the path
+        for (v = sink; v != source; v = parent[v]) {
+            u = parent[v];
+            residualGraph[u][v] -= path_flow;
+            residualGraph[v][u] += path_flow;
+        }
+
+        // Add path flow to overall flow
+        max_flow += path_flow;
+    }
+
+    return max_flow;
+}
+
+int main() {
+    // Number of vertices (nodes)
+    int V = 6;
+    // Create the graph
+    vector<vector<int>> graph(V, vector<int>(V, 0));
+
+    // Add edges with capacities
+    graph[1][6] = 0; // vertex 1 -> 2
+    graph[1][4] = 4; // vertex 1 -> 4
+    graph[2][3] = 6; // vertex 2 -> 3
+    graph[4][2] = 3; // vertex 4 -> 2
+    graph[4][5] = 1; // vertex 4 -> 5
+    graph[3][5] = 8; // vertex 3 -> 5
+    graph[3][6] = 5; // vertex 3 -> 6
+    graph[5][6] = 2; // vertex 5 -> 6
+
+    int source = 0;  // Source is vertex 1 (0 in 0-index)
+    int sink = 5;    // Sink is vertex 6 (5 in 0-index)
+
+    // Calculate maximum flow
+    cout << "The maximum possible flow from vertex 1 to vertex 6 is " 
+         << fordFulkerson(graph, source, sink) << endl;
+
+    return 0;
+}
 
