@@ -1,1 +1,53 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <unordered_set>
 
+using namespace std;
+
+unordered_set<string> generateShortForms(const string& word) {
+    unordered_set<string> shortForms;
+
+    // If word length is <= 4, return the word itself as the only short form
+    if (word.size() <= 4) {
+        shortForms.insert(word);
+        return shortForms;
+    }
+
+    // Iterate through all possible combinations of subsequences
+    for (int i = 0; i < word.size(); ++i) {
+        for (int j = i; j < word.size(); ++j) {
+            string subsequence;
+            for (int k = i; k <= j; ++k) {
+                subsequence += word[k];
+            }
+            if (subsequence.size() <= 4) {
+                shortForms.insert(subsequence);
+            }
+        }
+    }
+
+    return shortForms;
+}
+
+int main() {
+    int t;
+    cin >> t; // Number of test cases
+
+    for (int i = 0; i < t; ++i) {
+        string word;
+        cin >> word; // Input the word
+        
+        // Generate short forms
+        unordered_set<string> shortForms = generateShortForms(word);
+
+        // Output the short forms
+        cout << "Short forms of " << word << " are: ";
+        for (const string& sf : shortForms) {
+            cout << sf << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
